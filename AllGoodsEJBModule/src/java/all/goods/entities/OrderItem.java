@@ -28,8 +28,17 @@ public class OrderItem implements Serializable {
     @ManyToOne
     private Product product;
     private int quantity;
+    private double price;
 
     public OrderItem() {
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public Order getOrder() {

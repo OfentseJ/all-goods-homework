@@ -27,6 +27,8 @@ public interface ProductFacadeLocal {
     List<Product> findAll();
 
     List<Product> findRange(int[] range);
+    
+    List<Product> findLowStock(int threshold);
 
     int count();
     

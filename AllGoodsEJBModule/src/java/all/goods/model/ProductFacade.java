@@ -6,6 +6,7 @@
 package all.goods.model;
 
 import all.goods.entities.Product;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -28,5 +29,13 @@ public class ProductFacade extends AbstractFacade<Product> implements ProductFac
     public ProductFacade() {
         super(Product.class);
     }
+
+    @Override
+    public List<Product> findLowStock(int threshold) {
+        return em.createQuery("SELECT p FROM Product p WHERE p.quantity < :threshold", Product.class)
+                 .setParameter("threshold", threshold)
+                 .getResultList();
+    }
+
     
 }

@@ -8,6 +8,50 @@
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>all.goods.web.LoginServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LowStockServlet</servlet-name>
+        <servlet-class>all.goods.web.LowStockServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RestockProductServlet</servlet-name>
+        <servlet-class>all.goods.web.RestockProductServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewOrdersServlet</servlet-name>
+        <servlet-class>all.goods.web.ViewOrdersServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProductServlet</servlet-name>
+        <servlet-class>all.goods.web.ProductServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RemoveProductServlet</servlet-name>
+        <servlet-class>all.goods.web.RemoveProductServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewProductsServlet</servlet-name>
+        <servlet-class>all.goods.web.ViewProductsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CheckoutServlet</servlet-name>
+        <servlet-class>all.goods.web.CheckoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>all.goods.web.AdminServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RoleChangeServlet</servlet-name>
+        <servlet-class>all.goods.web.RoleChangeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ImageServlet</servlet-name>
+        <servlet-class>all.goods.web.ImageServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateCartServlet</servlet-name>
+        <servlet-class>all.goods.web.UpdateCartServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet.do</url-pattern>
@@ -15,6 +59,50 @@
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LowStockServlet</servlet-name>
+        <url-pattern>/LowStockServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RestockProductServlet</servlet-name>
+        <url-pattern>/RestockProductServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewOrdersServlet</servlet-name>
+        <url-pattern>/ViewOrdersServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProductServlet</servlet-name>
+        <url-pattern>/ProductServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RemoveProductServlet</servlet-name>
+        <url-pattern>/RemoveProductServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewProductsServlet</servlet-name>
+        <url-pattern>/ViewProductsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckoutServlet</servlet-name>
+        <url-pattern>/CheckoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/AdminServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RoleChangeServlet</servlet-name>
+        <url-pattern>/RoleChangeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImageServlet</servlet-name>
+        <url-pattern>/ImageServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateCartServlet</servlet-name>
+        <url-pattern>/UpdateCartServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

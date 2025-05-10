@@ -34,7 +34,7 @@
         <div class="card shadow p-5">
             <h2>Welcome to AllGoods, <%= user.getName() %>!</h2>
             <p class="lead mt-3">Browse our wide variety of products and shop with ease.</p>
-            <a href="productList.jsp" class="btn btn-success mt-3">View Products</a>
+            <a href="ViewProductsServlet" class="btn btn-success mt-3">View Products</a>
             <a href="logout.jsp" class="btn btn-outline-secondary mt-3 ms-2">Logout</a>
         </div>
     </div>

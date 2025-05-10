@@ -30,8 +30,6 @@ public class RegisterServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         
-        System.out.println("UserFacade is " + (ufl == null ? "null" : "available"));
-        
         if(ufl.findByEmail(email) != null){
             request.setAttribute("error", "Email already registered.");
             request.getRequestDispatcher("register.jsp").forward(request, response);

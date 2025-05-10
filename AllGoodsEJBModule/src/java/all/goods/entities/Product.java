@@ -7,10 +7,12 @@ package all.goods.entities;
 
 import java.io.Serializable;
 import java.util.List;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 
 /**
@@ -29,7 +31,9 @@ public class Product implements Serializable {
     private String description;
     private double price;
     private int quantity;
-    private String imageUrl;
+    @Lob
+    @Column(name = "IMAGE_DATA")
+    private byte[] imageData;
     @OneToMany(mappedBy = "product")
     private List<OrderItem> orderItems;
 
@@ -68,12 +72,12 @@ public class Product implements Serializable {
         this.quantity = quantity;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public byte[] getImageData() {
+        return imageData;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setImageData(byte[] imageData) {
+        this.imageData = imageData;
     }
 
     public List<OrderItem> getOrderItems() {

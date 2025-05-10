@@ -32,7 +32,6 @@ public class User implements Serializable {
     @Column(nullable = false, unique = true)
     private String email;
     private String password;
-    private String address;
     private String userRole;
     @OneToMany(mappedBy = "user")
     private List<Order> orders;
@@ -62,14 +61,6 @@ public class User implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 
     public String getUserRole() {
