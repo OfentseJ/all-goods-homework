@@ -13,7 +13,6 @@ import all.goods.model.CartItem;
 import all.goods.model.OrderFacadeLocal;
 import all.goods.model.ProductFacadeLocal;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -86,6 +85,6 @@ public class CheckoutServlet extends HttpServlet {
         session.removeAttribute("cart");
 
         // Redirect to confirmation page
-        response.sendRedirect("order-confirmation.jsp");
+        response.sendRedirect("confirmation.jsp");
     }
 }

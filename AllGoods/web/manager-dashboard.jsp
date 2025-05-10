@@ -65,7 +65,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Remove Product</h5>
                         <p class="card-text">Delete existing products from the catalog.</p>
-                        <a href="remove-product.jsp" class="btn btn-danger">Remove Product</a>
+                        <a href="RemoveProductServlet" class="btn btn-danger">Remove Product</a>
                     </div>
                 </div>
             </div>

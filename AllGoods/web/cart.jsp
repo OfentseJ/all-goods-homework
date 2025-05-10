@@ -81,7 +81,7 @@
 
             <!-- Checkout button -->
             <div class="text-center">
-                <form action="checkout" method="post">
+                <form action="CheckoutServlet" method="post">
                     <input type="submit" value="Proceed to Checkout" class="btn btn-primary" />
                 </form>
             </div>

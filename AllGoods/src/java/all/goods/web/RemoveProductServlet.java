@@ -25,6 +25,14 @@ public class RemoveProductServlet extends HttpServlet {
     private ProductFacadeLocal productFacade;
 
     @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        List<Product> products = productFacade.findAll();
+        request.setAttribute("products", products);
+        request.getRequestDispatcher("remove-product.jsp").forward(request, response);
+    }
+    
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
@@ -41,9 +49,7 @@ public class RemoveProductServlet extends HttpServlet {
                 // log error (optional)
             }
         }
-
-        List<Product> products = productFacade.findAll();
-        request.setAttribute("products", products);
+        
         request.getRequestDispatcher("remove-product.jsp").forward(request, response);
         
     }
