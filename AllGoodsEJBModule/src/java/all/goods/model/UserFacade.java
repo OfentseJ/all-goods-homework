@@ -8,6 +8,7 @@ package all.goods.model;
 import all.goods.entities.User;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 
 /**
@@ -27,6 +28,17 @@ public class UserFacade extends AbstractFacade<User> implements UserFacadeLocal 
 
     public UserFacade() {
         super(User.class);
+    }
+
+    @Override
+    public User findByEmail(String email) {
+        try {
+            return em.createQuery("SELECT u FROM User u WHERE u.email = :email", User.class)
+                     .setParameter("email", email)
+                     .getSingleResult();
+        } catch (NoResultException e) {
+            return null;
+        }
     }
     
 }

@@ -4,34 +4,50 @@
     Author     : user
 --%>
 
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Login - AllGoods</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .card {
+            margin-top: 80px;
+        }
+    </style>
 </head>
-<body class="bg-light d-flex justify-content-center align-items-center vh-100">
+<body>
+    <div class="container d-flex justify-content-center">
+        <div class="card shadow p-4" style="width: 100%; max-width: 400px;">
+            <h3 class="text-center mb-4">Login to AllGoods</h3>
 
-<div class="card shadow p-5 text-center" style="width: 100%; max-width: 400px;">
-    <h2 class="mb-3">Login to <span class="text-success">AllGoods</span></h2>
-    <form action="login" method="post">
-        <div class="form-group mb-3 text-start">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control mt-1" id="email" name="email" required>
+            <% if (request.getAttribute("error") != null) { %>
+                <div class="alert alert-danger">
+                    <%= request.getAttribute("error") %>
+                </div>
+            <% } %>
+
+            <form action="LoginServlet.do" method="post">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" name="email" id="email" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="password" id="password" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-success btn-lg w-100">Login</button>
+            </form>
+
+            <div class="mt-3 text-center">
+                Don't have an account? <a href="register.jsp">Register</a>
+            </div>
         </div>
-        <div class="form-group mb-4 text-start">
-            <label for="password">Password</label>
-            <input type="password" class="form-control mt-1" id="password" name="password" required>
-        </div>
-        <button type="submit" class="btn btn-success w-100">Login</button>
-    </form>
-    <div class="mt-3">
-        <p class="mb-0">Don't have an account?</p>
-        <a href="register.jsp" class="btn btn-link text-success">Create one</a>
     </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
