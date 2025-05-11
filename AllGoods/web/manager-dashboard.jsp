@@ -58,6 +58,17 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Edit Product -->
+            <div class="col-md-6 mb-3">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Edit existing Product Details</h5>
+                        <p class="card-text">Update details of an existing store product.</p>
+                        <a href="EditStockServlet" class="btn btn-success">Edit Product</a>
+                    </div>
+                </div>
+            </div>
 
             <!-- Remove Product -->
             <div class="col-md-6 mb-3">

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
+        <servlet-name>NewValuesServlet</servlet-name>
+        <servlet-class>all.goods.web.NewValuesServlet</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>RegisterServlet</servlet-name>
         <servlet-class>all.goods.web.RegisterServlet</servlet-class>
     </servlet>
@@ -56,6 +60,25 @@
         <servlet-name>UpdateOrderStatusServlet</servlet-name>
         <servlet-class>all.goods.web.UpdateOrderStatusServlet</servlet-class>
     </servlet>
+<<<<<<< Updated upstream
+=======
+    <servlet>
+        <servlet-name>EditStockServlet</servlet-name>
+        <servlet-class>all.goods.web.EditStockServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateProductServlet</servlet-name>
+        <servlet-class>all.goods.web.UpdateProductServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdatedValuesServlet</servlet-name>
+        <servlet-class>all.goods.web.UpdatedValuesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewValuesServlet</servlet-name>
+        <url-pattern>/NewValuesServlet.do</url-pattern>
+    </servlet-mapping>
+>>>>>>> Stashed changes
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet.do</url-pattern>
@@ -112,6 +135,21 @@
         <servlet-name>UpdateOrderStatusServlet</servlet-name>
         <url-pattern>/UpdateOrderStatusServlet</url-pattern>
     </servlet-mapping>
+<<<<<<< Updated upstream
+=======
+    <servlet-mapping>
+        <servlet-name>EditStockServlet</servlet-name>
+        <url-pattern>/EditStockServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateProductServlet</servlet-name>
+        <url-pattern>/UpdateProductServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdatedValuesServlet</servlet-name>
+        <url-pattern>/UpdatedValuesServlet.do</url-pattern>
+    </servlet-mapping>
+>>>>>>> Stashed changes
     <session-config>
         <session-timeout>
             30
