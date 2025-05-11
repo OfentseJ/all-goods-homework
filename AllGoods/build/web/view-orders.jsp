@@ -31,6 +31,8 @@
             <th>Items</th>
             <th>Order Date</th>
             <th>Total Price</th>
+            <th>Status</th>
+            <th>Action</th>
         </tr>
         </thead>
         <tbody>
@@ -60,12 +62,24 @@
             </td>
             <td><%= order.getOrderDate() %></td>
             <td>$<%= String.format("%.2f", totalPrice) %></td>
+            <td>
+                <form action="UpdateOrderStatusServlet" method="post" class="d-flex">
+                    <input type="hidden" name="orderId" value="<%= order.getId() %>">
+                    <select name="status" class="form-select form-select-sm me-2">
+                        <option value="Not Shipped" <%= "Not Shipped".equals(order.getStatus()) ? "selected" : "" %>>Not Shipped</option>
+                        <option value="Shipped" <%= "Shipped".equals(order.getStatus()) ? "selected" : "" %>>Shipped</option>
+                        <option value="Delivered" <%= "Delivered".equals(order.getStatus()) ? "selected" : "" %>>Delivered</option>
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-primary">Update</button>
+                </form>
+            </td>
+            <td></td>
         </tr>
         <%
                 }
             } else {
         %>
-        <tr><td colspan="5" class="text-center">No orders found.</td></tr>
+        <tr><td colspan="7" class="text-center">No orders found.</td></tr>
         <% } %>
         </tbody>
     </table>

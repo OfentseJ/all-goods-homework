@@ -8,7 +8,6 @@ package all.goods.web;
 import all.goods.entities.User;
 import all.goods.model.UserFacadeLocal;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

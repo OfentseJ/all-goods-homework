@@ -52,6 +52,10 @@
         <servlet-name>UpdateCartServlet</servlet-name>
         <servlet-class>all.goods.web.UpdateCartServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UpdateOrderStatusServlet</servlet-name>
+        <servlet-class>all.goods.web.UpdateOrderStatusServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet.do</url-pattern>
@@ -62,15 +66,15 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>LowStockServlet</servlet-name>
-        <url-pattern>/LowStockServlet.do</url-pattern>
+        <url-pattern>/LowStockServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>RestockProductServlet</servlet-name>
-        <url-pattern>/RestockProductServlet.do</url-pattern>
+        <url-pattern>/RestockProductServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ViewOrdersServlet</servlet-name>
-        <url-pattern>/ViewOrdersServlet.do</url-pattern>
+        <url-pattern>/ViewOrdersServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ProductServlet</servlet-name>
@@ -103,6 +107,10 @@
     <servlet-mapping>
         <servlet-name>UpdateCartServlet</servlet-name>
         <url-pattern>/UpdateCartServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateOrderStatusServlet</servlet-name>
+        <url-pattern>/UpdateOrderStatusServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

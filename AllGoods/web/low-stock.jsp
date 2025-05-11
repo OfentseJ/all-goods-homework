@@ -51,14 +51,14 @@
                     for (Product p : lowStockProducts) {
                 %>
                     <tr>
-                        <td><img src="uploads/<%= p.getImageUrl()%>" alt="Product Image" width="80" height="80"></td>
+                        <td><img src="ImageServlet?id=<%= p.getId() %>" alt="Product Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 6px;"></td>
                         <td><%= p.getName() %></td>
                         <td><%= p.getDescription() %></td>
-                        <td>$<%= p.getPrice() %></td>
+                        <td>R<%= p.getPrice() %></td>
                         <td><%= p.getQuantity() %></td>
                         <td>
                             <form action="RestockProductServlet" method="post" class="form-inline">
-                                <input type="hidden" name="productId" value="<%= p.getId() %>">
+                                <input type="hidden" name="productId" value="<%=p.getId()%>">
                                 <input type="number" name="restockAmount" class="form-control form-control-sm mr-2" min="1" required>
                                 <button type="submit" class="btn btn-sm btn-primary">Restock</button>
                             </form>

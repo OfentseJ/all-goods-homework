@@ -29,7 +29,7 @@ public class UpdateCartServlet extends HttpServlet {
         Map<Long, CartItem> cart = (Map<Long, CartItem>) session.getAttribute("cart");
         
         if (cart != null) {
-            // Iterate through the parameters to find updates or removals
+
             for (String param : request.getParameterMap().keySet()) {
                 if (param.startsWith("quantity_")) {
                     Long productId = Long.parseLong(param.substring("quantity_".length()));
@@ -40,15 +40,13 @@ public class UpdateCartServlet extends HttpServlet {
                     }
                 } else if (param.startsWith("remove_")) {
                     Long productId = Long.parseLong(param.substring("remove_".length()));
-                    cart.remove(productId);  // Remove item from cart
+                    cart.remove(productId);  
                 }
             }
         }
         
-        // Update the session with the modified cart
         session.setAttribute("cart", cart);
 
-        // Redirect back to the cart page
         response.sendRedirect("cart.jsp");
     }
 }

@@ -40,8 +40,9 @@
         }
     </style>
 </head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <body>
-
+<jsp:include page="header.jsp" />
 <!-- Container for page content -->
 <div class="container mt-4">
     <h2 class="text-center mb-4">Available Products</h2>

@@ -34,10 +34,19 @@ public class Order implements Serializable {
     private LocalDateTime orderDate;
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderItem> items;
+    private String status;
 
     public Order() {
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    
     public User getUser() {
         return user;
     }

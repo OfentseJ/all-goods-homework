@@ -35,7 +35,7 @@
                         for (Product p : products) {
                 %>
                     <tr>
-                        <td><img src="ImageServlet?id=<%= p.getId() %>" alt="Product Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 6px;"></td>
+                        <td><img src="ImageServlet?id=<%= p.getId() %>" alt="Product Image" style="width: 80px; height: 80px; object-fit: cover; border-radius: 6px;">/</td>
                         <td><%= p.getName() %></td>
                         <td><%= p.getDescription() %></td>
                         <td><%= p.getPrice() %></td>

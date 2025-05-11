@@ -16,8 +16,9 @@
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <body>
-
+<jsp:include page="header.jsp" />
 <!-- Container for page content -->
 <div class="container mt-4">
     <h2 class="text-center">Your Shopping Cart</h2>
@@ -28,6 +29,9 @@
     %>
         <!-- Message when cart is empty -->
         <p class="text-center">Your cart is empty.</p>
+        <div class="text-center">
+            <a href="ViewProductsServlet" class="btn btn-success">Go Back</a>
+        </div>
     <%
         } else {
             double total = 0;
@@ -81,9 +85,8 @@
 
             <!-- Checkout button -->
             <div class="text-center">
-                <form action="CheckoutServlet" method="post">
-                    <input type="submit" value="Proceed to Checkout" class="btn btn-primary" />
-                </form>
+                <a href="ViewProductsServlet" class="btn btn-success">Go Back</a>
+                <a href="checkout.jsp" class="btn btn-primary">Proceed to Checkout</a>
             </div>
         </form>
     <%

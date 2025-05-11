@@ -8,7 +8,6 @@ package all.goods.web;
 import all.goods.entities.Product;
 import all.goods.model.ProductFacadeLocal;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -22,20 +21,20 @@ import javax.servlet.http.HttpServletResponse;
 public class RestockProductServlet extends HttpServlet {
 
     @EJB
-    private ProductFacadeLocal productFacade;
+    private ProductFacadeLocal pfl;
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         try {
-            int productId = Integer.parseInt(request.getParameter("productId"));
+            Long productId = Long.parseLong(request.getParameter("productId"));
             int restockAmount = Integer.parseInt(request.getParameter("restockAmount"));
 
-            Product product = productFacade.find(productId);
+            Product product = pfl.find(productId);
             if (product != null) {
                 product.setQuantity(product.getQuantity() + restockAmount);
-                productFacade.edit(product);
+                pfl.edit(product);
             }
 
             response.sendRedirect("LowStockServlet");

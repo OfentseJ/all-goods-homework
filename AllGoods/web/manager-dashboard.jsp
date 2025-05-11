@@ -32,7 +32,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Low Stock Products</h5>
                         <p class="card-text">See products that are running low and need restocking.</p>
-                        <a href="low-stock.jsp" class="btn btn-primary">View Low Stock</a>
+                        <a href="LowStockServlet" class="btn btn-primary">View Low Stock</a>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                     <div class="card-body">
                         <h5 class="card-title">View Orders</h5>
                         <p class="card-text">Check all customer orders made on the platform.</p>
-                        <a href="view-orders.jsp" class="btn btn-primary">View Orders</a>
+                        <a href="ViewOrdersServlet" class="btn btn-primary">View Orders</a>
                     </div>
                 </div>
             </div>

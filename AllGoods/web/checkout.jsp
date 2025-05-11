@@ -13,6 +13,7 @@
     <title>Checkout</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <body>
 <jsp:include page="header.jsp" />
 
@@ -60,7 +61,7 @@
 
     <!-- Total -->
     <div class="text-end mb-4">
-        <h5>Total: $<%= String.format("%.2f", total) %></h5>
+        <h5>Total: R<%= String.format("%.2f", total) %></h5>
     </div>
 
     <!-- Shipping Form -->
