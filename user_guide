@@ -6,4 +6,5 @@ Password:
 Once properly added you will be taken to the admin dashboard where you will see all stored users in the databse and can change their respective roles.
 Customers are able to view products and add them to their cart before proceeding to checkout.
 Managers can view which products have low stock(Under 5 quantity) and restock them
-They can also view orders, add new products, edit existing products, remove products and 
+They can also view orders, add new products, edit existing products, remove products and update products
+
