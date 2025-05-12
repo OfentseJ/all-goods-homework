@@ -33,7 +33,7 @@
                 </li>
                 <% if (user != null) { %>
                     <li class="nav-item">
-                        <a class="nav-link" href="LogoutServlet">Logout</a>
+                        <a class="nav-link" href="logout.jsp">Logout</a>
                     </li>
                 <% } else { %>
                     <li class="nav-item">

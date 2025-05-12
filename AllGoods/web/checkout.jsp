@@ -49,9 +49,9 @@
         %>
             <tr>
                 <td><%= p.getName() %></td>
-                <td>$<%= String.format("%.2f", p.getPrice()) %></td>
+                <td>R<%= String.format("%.2f", p.getPrice()) %></td>
                 <td><%= item.getQuantity() %></td>
-                <td>$<%= String.format("%.2f", subtotal) %></td>
+                <td>R<%= String.format("%.2f", subtotal) %></td>
             </tr>
         <%
             }

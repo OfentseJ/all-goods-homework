@@ -62,12 +62,12 @@
                             <img src="ImageServlet?id=<%= p.getId() %>" alt="<%= p.getName() %>" style="height: 60px; width: 60px; object-fit: cover; border-radius: 5px; margin-right: 10px;">
                             <%= p.getName() %>
                         </td>
-                        <td>$<%= String.format("%.2f", p.getPrice()) %></td>
+                        <td>R<%= String.format("%.2f", p.getPrice()) %></td>
                         <td>
                             <!-- Quantity input -->
                             <input type="number" name="quantity_<%= p.getId() %>" value="<%= item.getQuantity() %>" min="1" class="form-control" style="width: 80px;">
                         </td>
-                        <td>$<%= String.format("%.2f", subtotal) %></td>
+                        <td>R<%= String.format("%.2f", subtotal) %></td>
                         <td>
                             <!-- Buttons to update or remove item -->
                             <button type="submit" name="update_<%= p.getId() %>" value="update" class="btn btn-warning btn-sm">Update</button>
@@ -81,7 +81,7 @@
             </table>
 
             <!-- Total price section -->
-            <p class="text-end fs-4"><strong>Total:</strong> $<%= String.format("%.2f", total) %></p>
+            <p class="text-end fs-4"><strong>Total:</strong> R<%= String.format("%.2f", total) %></p>
 
             <!-- Checkout button -->
             <div class="text-center">

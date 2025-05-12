@@ -54,14 +54,14 @@
                         double price = (product != null) ? product.getPrice() : 0.0;
                         totalPrice += price * qty;
                 %>
-                    <li><%= product != null ? product.getName() : "Unknown product" %> - Qty: <%= qty %> @ $<%= String.format("%.2f", price) %></li>
+                    <li><%= product != null ? product.getName() : "Unknown product" %> - Qty: <%= qty %> @ R<%= String.format("%.2f", price) %></li>
                 <%
                     }
                 %>
                 </ul>
             </td>
             <td><%= order.getOrderDate() %></td>
-            <td>$<%= String.format("%.2f", totalPrice) %></td>
+            <td>R<%= String.format("%.2f", totalPrice) %></td>
             <td>
                 <form action="UpdateOrderStatusServlet" method="post" class="d-flex">
                     <input type="hidden" name="orderId" value="<%= order.getId() %>">
