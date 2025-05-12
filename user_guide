@@ -7,4 +7,7 @@ Once properly added you will be taken to the admin dashboard where you will see 
 Customers are able to view products and add them to their cart before proceeding to checkout.
 Managers can view which products have low stock(Under 5 quantity) and restock them
 They can also view orders, add new products, edit existing products, remove products and update products
-
+To access the populated database using glassfish, use the credentials below:
+DB_NAME: AllGoodsDB
+DB_USER: app
+DB_PASSWORD: 5678 
