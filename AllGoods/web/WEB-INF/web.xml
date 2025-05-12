@@ -60,17 +60,6 @@
         <servlet-name>UpdateOrderStatusServlet</servlet-name>
         <servlet-class>all.goods.web.UpdateOrderStatusServlet</servlet-class>
     </servlet>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     <servlet>
         <servlet-name>EditStockServlet</servlet-name>
         <servlet-class>all.goods.web.EditStockServlet</servlet-class>
@@ -87,16 +76,6 @@
         <servlet-name>NewValuesServlet</servlet-name>
         <url-pattern>/NewValuesServlet.do</url-pattern>
     </servlet-mapping>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet.do</url-pattern>
@@ -153,17 +132,6 @@
         <servlet-name>UpdateOrderStatusServlet</servlet-name>
         <url-pattern>/UpdateOrderStatusServlet</url-pattern>
     </servlet-mapping>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     <servlet-mapping>
         <servlet-name>EditStockServlet</servlet-name>
         <url-pattern>/EditStockServlet</url-pattern>
@@ -176,16 +144,6 @@
         <servlet-name>UpdatedValuesServlet</servlet-name>
         <url-pattern>/UpdatedValuesServlet.do</url-pattern>
     </servlet-mapping>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     <session-config>
         <session-timeout>
             30
